@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HullSpeed", "HullSpeed\HullSpeed.csproj", "{BA354EDE-6D90-465A-A4DE-56456E1A7EE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA354EDE-6D90-465A-A4DE-56456E1A7EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA354EDE-6D90-465A-A4DE-56456E1A7EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA354EDE-6D90-465A-A4DE-56456E1A7EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA354EDE-6D90-465A-A4DE-56456E1A7EE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {852B6E09-09BF-46D5-9483-B1521B3EB558}
+	EndGlobalSection
+EndGlobal
