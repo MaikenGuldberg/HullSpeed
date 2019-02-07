@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HullSpeed"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="150" Width="302.479" KeyDown="MainWindow_OnKeyDown">
+    <StackPanel Orientation="Horizontal">
+        <StackPanel MinWidth="200">
+            <WrapPanel Name="WrapName">
+                <Label>Name:</Label>
+                <TextBox Margin="3" MinWidth="100" MinHeight="10" Name="NameTextBox" TextChanged="NameTextBox_OnTextChanged"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <Label>Length:</Label>
+                <TextBox Margin="3" MinWidth="100" MinHeight="10" Name="LengthTextBox" TextChanged="LengthTextBox_OnTextChanged"></TextBox>
+                <Label>feet</Label>
+            </WrapPanel>
+            <StackPanel>
+                <Button Margin="5,5" Name="CalcButton" FontWeight="Bold" HorizontalAlignment="Center" Click="CalcButton_OnClick">Calculate Hull Speed</Button>
+            </StackPanel>
+            <WrapPanel>
+                <Label>Hull speed:</Label>
+                <Label Name="HullSpeedResultLabel">...</Label>
+                <Label>knots</Label>
+            </WrapPanel>
+        </StackPanel>
+        <Image Source="Sailboat.jpg" Margin="10, 0" HorizontalAlignment="Right" MouseUp="UIElement_OnMouseUp"/>
+    </StackPanel>
 </Window>

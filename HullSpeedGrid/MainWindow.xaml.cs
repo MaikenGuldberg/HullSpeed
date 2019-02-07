@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HullSpeed
+namespace HullSpeedGrid
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -27,15 +27,15 @@ namespace HullSpeed
             mySailboat = new Sailboat();
         }
 
-        private void CalcButton_OnClick(object sender, RoutedEventArgs e)
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(LengthTextBox.Text) || LengthTextBox.Text.All(char.IsNumber)==false)
+            if (string.IsNullOrEmpty(tbxLenght.Text) || tbxLenght.Text.All(char.IsNumber) == false)
             {
                 MessageBox.Show("Insert the lenght of the ship");
             }
             else
             {
-                HullSpeedResultLabel.Content = mySailboat.Hullspeed();
+                tbxHullSpeed.Text = mySailboat.Hullspeed().ToString();
             }
         }
 
@@ -51,22 +51,25 @@ namespace HullSpeed
             }
         }
 
-        private void UIElement_OnMouseUp(object sender, MouseButtonEventArgs e)
+        private void TbxName_OnTextChanged(object sender, TextChangedEventArgs e)
         {
-            if (string.IsNullOrEmpty(NameTextBox.Text) == false)
+            mySailboat.Name = tbxName.Text;
+        }
+
+        private void TbxLenght_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (tbxLenght.Text.All(char.IsNumber) == false)
             {
-                MessageBox.Show("The name of the ship is " + mySailboat.Name);
+                mySailboat.Length = Convert.ToDouble(tbxLenght.Text);
             }
         }
 
-        private void NameTextBox_OnTextChanged(object sender, TextChangedEventArgs e)
+        private void UIElement_OnMouseUp(object sender, MouseButtonEventArgs e)
         {
-            mySailboat.Name = NameTextBox.Text;
-        }
-
-        private void LengthTextBox_OnTextChanged(object sender, TextChangedEventArgs e)
-        {
-                mySailboat.Length = double.Parse(LengthTextBox.Text);
+            if (string.IsNullOrEmpty(tbxName.Text) == false)
+            {
+                MessageBox.Show("The name of the ship is " + mySailboat.Name);
+            }
         }
     }
 }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BA354EDE-6D90-465A-A4DE-56456E1A7EE5}</ProjectGuid>
+    <ProjectGuid>{BBA2D41B-5079-4DE2-BA6F-0E5C180DB06C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>HullSpeed</RootNamespace>
-    <AssemblyName>HullSpeed</AssemblyName>
+    <RootNamespace>HullSpeedGrid</RootNamespace>
+    <AssemblyName>HullSpeedGrid</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
